@@ -1,0 +1,14 @@
+- name: SSH
+  hosts: local
+  tasks:
+    - name: Ensure /root/.ssh exists
+      file:
+        path: /root/.ssh
+        state: directory
+
+    - name: Import ssh key
+      authorized_key:
+        user: root
+        key: '{{ ssh_key }}'
+      
+      

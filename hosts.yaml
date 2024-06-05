@@ -1,0 +1,4 @@
+myhosts:
+    local:
+        local_v:
+        ansible-host: 127.0.0.1
